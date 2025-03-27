@@ -1,0 +1,89 @@
+.header {
+    height: 45vh;  /* Increase height for larger screens */
+    margin-top: 600px;
+    margin: 30px auto;
+    background: url('https://images.squarespace-cdn.com/content/v1/65656f109469063885a29d68/56de1d8d-7f31-416b-88f3-281d1241c662/c11fe11a-3199-4ada-ba7b-4b46f3e59af8.JPG');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 60%; /* Adjust content width */
+    bottom: 10%;  /* Keep the content near the bottom of the header */
+    left: 5%;
+    animation: fadeIn 3.5s ease-in-out;
+    padding: 0 10px;
+    text-align: left;
+}
+
+.header-content h1 {
+    font-size: max(4.5vw, 24px);
+    font-weight: 600;
+    color: hsl(135, 84%, 42%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    color: #f0f0f0;
+    font-size: 1.1vw;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 90%;
+}
+
+.header-content button {
+    color: #ffffff;
+    background-color: hsl(245, 89%, 48%);
+    font-weight: 600;
+    padding: 1vw 2.3vw;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header-content button:hover {
+    background-color: #356f55;
+    transform: scale(1.05);
+}
+
+@media (max-width: 1050px) {
+    .header-content {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 750px) {
+    .header-content {
+        max-width: 80%;
+    }
+
+    .header-content p {
+        display: none;
+    }
+
+    .header-content button {
+        padding: 2vw 4vw;
+        font-size: 1.2rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

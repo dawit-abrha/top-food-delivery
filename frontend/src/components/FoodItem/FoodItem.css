@@ -1,0 +1,151 @@
+/* Food Item Container */
+.food-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: transform 0.2s ease-in-out;
+    max-width: 280px;
+    text-align: center;
+}
+
+.food-item:hover {
+    transform: scale(1.03);
+}
+
+/* Food Image */
+.food-item-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2427c3;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.add img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.food-item-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Food Info */
+.food-item-info {
+    margin-top: 12px;
+    width: 100%;
+}
+
+.food-item-name-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-item-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.food-item-rating {
+    width: 80px;
+}
+
+/* Description */
+.food-item-description {
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0;
+}
+
+/* Price */
+.food-item-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+/* Controls */
+.food-item-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Add and Remove Buttons */
+.food-item-add, 
+.food-item-remove {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.food-item-add:hover, 
+.food-item-remove:hover {
+    transform: scale(1.1);
+}
+
+/* Counter */
+.food-item-counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .food-item {
+        max-width: 90%;
+    }
+
+    .food-item-name {
+        font-size: 16px;
+    }
+
+    .food-item-description {
+        font-size: 13px;
+    }
+
+    .food-item-price {
+        font-size: 14px;
+    }
+
+    .food-item-add, 
+    .food-item-remove {
+        width: 28px;
+        height: 28px;
+    }
+}
+/* Add Button (Smaller Size) */
+
+.add:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .add {
+        width: 100%; /* Even smaller on mobile */
+    }
+}
